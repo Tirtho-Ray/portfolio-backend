@@ -12,13 +12,13 @@ const createCategoryIntoDB = async (payload: TCategory) => {
   return category;
 };
 
-// ✅ Get All Categories
+
 const getAllCategoriesFromDB = async () => {
   const categories = await Category.find();
   return categories;
 };
 
-// ✅ Get Single Category
+
 const getSingleCategoryFromDB = async (id: string) => {
   const category = await Category.findById(id);
   if (!category) {
@@ -27,7 +27,6 @@ const getSingleCategoryFromDB = async (id: string) => {
   return category;
 };
 
-// ✅ Update Category
 const updateCategoryInDB = async (id: string, payload: Partial<TCategory>) => {
   const updated = await Category.findByIdAndUpdate(id, payload, {
     new: true,
@@ -39,7 +38,7 @@ const updateCategoryInDB = async (id: string, payload: Partial<TCategory>) => {
   return updated;
 };
 
-// ✅ Delete Category
+
 const deleteCategoryFromDB = async (id: string) => {
   const deleted = await Category.findByIdAndDelete(id);
   if (!deleted) {

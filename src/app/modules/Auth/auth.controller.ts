@@ -3,7 +3,7 @@ import httpStatus from 'http-status';
 import { catchAsync } from '../../utils/catchAsync';
 import { AuthServices } from './auth.services';
 
-// 🟢 Register Controller
+
 const register = catchAsync(async (req: Request, res: Response) => {
   const result = await AuthServices.registerUser(req.body);
 
@@ -15,14 +15,14 @@ const register = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-// 🟡 Login Controller
+
 const login = catchAsync(async (req: Request, res: Response) => {
   const result = await AuthServices.loginUser(req.body);
 
   res.status(httpStatus.OK).json({
     success: true,
     message: 'Login successful!',
-    // user: result.user,
+
     tokens: result.tokens,
   });
 });
