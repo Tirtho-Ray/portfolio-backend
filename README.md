@@ -141,16 +141,23 @@ npm install
 
 Create .env file:
 
+# Environment
 NODE_ENV=development
+
+# Port
 PORT=8080
-DB_URL=<your_mongodb_url>
+
+# Database URL
+DB_URL=mongodb+srv://LearnExpressMongoose:wSzGi7VIc9sR756d@cluster0.thodmul.mongodb.net/LearnMongooseExpress?retryWrites=true&w=majority
+
+# Bcrypt Salt Rounds
 BCRYPT_SALT_ROUNDS=6
 
+# JWT Secrets and Expiry
 JWT_ACCESS_SECRET=<access_secret>
 JWT_ACCESS_EXPIRES_IN=100m
 JWT_REFRESH_SECRET=<refresh_secret>
 JWT_REFRESH_EXPIRES_IN=1y
-
 
 Run in development mode:
 
