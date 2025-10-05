@@ -8,7 +8,7 @@ import { CategoryValidation } from './category.validation';
 const router = express.Router();
 
 
-router.post('/create-category',validateRequest(CategoryValidation.categoryValidationSchema),auth(USER_ROLE.ADMIN), CategoryController.createCategory);
+router.post('/',validateRequest(CategoryValidation.categoryValidationSchema),auth(USER_ROLE.ADMIN), CategoryController.createCategory);
 router.get('/',auth(USER_ROLE.ADMIN), CategoryController.getAllCategories);
 router.get('/:id',auth(USER_ROLE.ADMIN), CategoryController.getSingleCategory);
 router.put('/:id',auth(USER_ROLE.ADMIN), CategoryController.updateCategory);
