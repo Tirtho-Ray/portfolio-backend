@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "9c4e34cb-3890-4a9e-8f67-83166ca4dc73",
+		"name": "portfollio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31309881"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGQyODBkMzk0M2NiYWU4NDgxNTFiNjYiLCJuYW1lIjoiVGlydGhvIHJheSIsImVtYWlsIjoidGlydGhvcmF5MTBAZ21haWwuY29tIiwibW9iaWxlTnVtYmVyIjoiMDE3NTI5MDA4ODEiLCJyb2xlIjoiVVNFUiIsInN0YXR1cyI6IkFDVElWRSIsImlhdCI6MTc1ODY0MzE2MywiZXhwIjoxNzU4NzI5NTYzfQ.Pj3mISdCmiNGTxGsnXLUSE50KzM1iMnvjVyqtgEgmfc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"tirthoray10@gmail.com\",\r\n    \"password\":\"MyNewStrongPass@123\"\r\n}\r\n\r\n\r\n\r\n//This is login user "
+						},
+						"url": {
+							"raw": "{{BASE_API}}/auth/login",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"tirthoray10@gmail.com\",\r\n    \"password\":\"MyNewStrongPass@123\"\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/auth/login",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "catrgory",
+			"item": [
+				{
+					"name": "get category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTQzMDQsImV4cCI6MTc1OTcwMDMwNH0.kBzuCFvx0ACRK9Phdt_tODsPJeb4mOz9Yb3AXiXYHIk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{BASE_API}}/categories",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTQzMDQsImV4cCI6MTc1OTcwMDMwNH0.kBzuCFvx0ACRK9Phdt_tODsPJeb4mOz9Yb3AXiXYHIk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"landing page\",\r\n    \"description\":\"this landing page\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/categories/68e2b01f636a5b65d2f52a57",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"categories",
+								"68e2b01f636a5b65d2f52a57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTQzMDQsImV4cCI6MTc1OTcwMDMwNH0.kBzuCFvx0ACRK9Phdt_tODsPJeb4mOz9Yb3AXiXYHIk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/categories/68e2b01f636a5b65d2f52a57",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"categories",
+								"68e2b01f636a5b65d2f52a57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "design",
+			"item": [
+				{
+					"name": "get all design",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_API}}/designs",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"designs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create design",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get design by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTQzMDQsImV4cCI6MTc1OTcwMDMwNH0.kBzuCFvx0ACRK9Phdt_tODsPJeb4mOz9Yb3AXiXYHIk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/designs/68e2c0134636af4af0089ee8",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"designs",
+								"68e2c0134636af4af0089ee8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTQzMDQsImV4cCI6MTc1OTcwMDMwNH0.kBzuCFvx0ACRK9Phdt_tODsPJeb4mOz9Yb3AXiXYHIk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"dors\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/designs/68e2c0134636af4af0089ee8",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"designs",
+								"68e2c0134636af4af0089ee8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete design",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTQzMDQsImV4cCI6MTc1OTcwMDMwNH0.kBzuCFvx0ACRK9Phdt_tODsPJeb4mOz9Yb3AXiXYHIk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"dors\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_API}}/designs/68e2c0134636af4af0089ee8",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"designs",
+								"68e2c0134636af4af0089ee8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "get all review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_API}}/reviews",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYmYwZWMxYjNkNWYzYzBjNzgyMDkiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMDBAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTA1MTEsImV4cCI6MTc1OTY5NjUxMX0.sCv5VLQ2zC5a5tITlwsU_jx6wBw7YrlB_OTQNjQlKaE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n//   \"reviewer\": \"xxxxxx\",no need this this is also auto come form token \r\n  \"design\": \"68e2c0134636af4af0089ee8\",\r\n  \"rating\": 5,\r\n  \"comment\": \"Fantastic design! Clean layout and very easy to work with.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/reviews",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get review",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTUzOTQsImV4cCI6MTc1OTcwMTM5NH0.j9SKzQScXDirKQMhx16gpIG8BQkznSafrFhg6n4XVV4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n//   \"reviewer\": \"xxxxxx\",no need this this is also auto come form token \r\n  \"design\": \"68e2c0134636af4af0089ee8\",\r\n  \"rating\": 4,\r\n  \"comment\": \"Fantastic design! Clean layout and very easy to work with.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/reviews/68e2d19d5076f5e798692bbd",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"reviews",
+								"68e2d19d5076f5e798692bbd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTUzOTQsImV4cCI6MTc1OTcwMTM5NH0.j9SKzQScXDirKQMhx16gpIG8BQkznSafrFhg6n4XVV4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n//   \"reviewer\": \"xxxxxx\",no need this this is also auto come form token \r\n  \"design\": \"68e2c0134636af4af0089ee8\",\r\n  \"rating\": 4,\r\n  \"comment\": \"Fantastic design! Clean layout and very easy to work with.\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{BASE_API}}/reviews/68e2d19d5076f5e798692bbd",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"reviews",
+								"68e2d19d5076f5e798692bbd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "price",
+			"item": [
+				{
+					"name": "delete price",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTUzOTQsImV4cCI6MTc1OTcwMTM5NH0.j9SKzQScXDirKQMhx16gpIG8BQkznSafrFhg6n4XVV4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/pricing/68e2d4060d9be0e21d581852",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"pricing",
+								"68e2d4060d9be0e21d581852"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create price",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTUzOTQsImV4cCI6MTc1OTcwMTM5NH0.j9SKzQScXDirKQMhx16gpIG8BQkznSafrFhg6n4XVV4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Basic\",\r\n    \"price\": 100,\r\n    \"features\": [\r\n      \"Access to basic features\",\r\n      \"Email support\"\r\n    ],\r\n    \"duration\": \"monthly\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/pricing",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"pricing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update price",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_API}}/pricing",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"pricing"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "delete Purchase",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTUzOTQsImV4cCI6MTc1OTcwMTM5NH0.j9SKzQScXDirKQMhx16gpIG8BQkznSafrFhg6n4XVV4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/purchases/68e2d6bd859d57ac12bc1343",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"purchases",
+								"68e2d6bd859d57ac12bc1343"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGUyYTc3OTY2MjRkMTMyZDkzNmUwYzYiLCJuYW1lIjoieFNvcmFzIiwiZW1haWwiOiJ0aXJ0aG9yYXkxMEBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJzdGF0dXMiOiJBQ1RJVkUiLCJpYXQiOjE3NTk2OTUzOTQsImV4cCI6MTc1OTcwMTM5NH0.j9SKzQScXDirKQMhx16gpIG8BQkznSafrFhg6n4XVV4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Basic\",\r\n    \"price\": 100,\r\n    \"features\": [\r\n      \"Access to basic features\",\r\n      \"Email support\"\r\n    ],\r\n    \"duration\": \"monthly\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/pricing",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"pricing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update purchase",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get purcheas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_API}}/pricing",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"pricing"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_API}}",
+					"host": [
+						"{{BASE_API}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": ""
+		},
+		{
+			"key": "BASE_API",
+			"value": ""
+		}
+	]
+}
