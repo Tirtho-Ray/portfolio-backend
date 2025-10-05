@@ -1,8 +1,8 @@
-🎨 UX/UI Designer’s Portfolio Website – Backend API
+ UX/UI Designer’s Portfolio Website – Backend API
 
 A full-featured backend API for a UX/UI designer's portfolio website. This project includes user management (admin and customer), design showcase, pricing plans, reviews, and order management, built using Node.js, Express.js, TypeScript, and MongoDB with proper authentication, validation, and error handling.
 
-🚀 Features
+ Features
 
 JWT Authentication (Admin & Customer)
 
@@ -22,7 +22,7 @@ Secure .env config for sensitive credentials
 
 Bonus features: Search, Pagination, Soft Delete, Aggregation (Top Rated)
 
-🧱 Tech Stack
+ Tech Stack
 
 Backend: Node.js, Express.js, TypeScript
 
@@ -34,7 +34,7 @@ Validation: Zod / Joi
 
 Environment Config: dotenv
 
-📁 Project Structure
+ Project Structure
 ├── src
 │   ├── config/            # DB and env config
 │   ├── controllers/       # Route handlers
@@ -49,34 +49,34 @@ Environment Config: dotenv
 ├── tsconfig.json
 └── README.md
 
-🧪 API Endpoints
-🔐 Auth
+ API Endpoints
+   Auth
 Method	Endpoint	Description
 POST	/api/auth/register	Register user
 POST	/api/auth/login	Login user
-👤 Users
+   Users
 Method	Endpoint	Description
 GET	/api/users/profile	Get user profile
 PUT	/api/users/update	Update profile
-🎨 Designs
+   Designs
 Method	Endpoint	Description
 GET	/api/designs	Get all designs
 GET	/api/designs/:id	Get design by ID
 POST	/api/designs	Create design (Admin)
 PUT	/api/designs/:id	Update design (Admin)
 DELETE	/api/designs/:id	Delete design (Admin)
-🗂 Categories
+   Categories
 Method	Endpoint	Description
 GET	/api/categories	List all categories
 POST	/api/categories	Create category (Admin)
 DELETE	/api/categories/:id	Delete category (Admin)
-💰 Pricing Plans
+   Pricing Plans
 Method	Endpoint	Description
 GET	/api/pricing	List pricing plans
 POST	/api/pricing	Create pricing plan (Admin)
 PUT	/api/pricing/:id	Update plan (Admin)
 DELETE	/api/pricing/:id	Delete plan (Admin)
-⭐ Reviews
+   Reviews
 Method	Endpoint	Description
 POST	/api/reviews	Create review (Customer)
 GET	/api/reviews/:designId	Get reviews for design
@@ -85,7 +85,7 @@ DELETE	/api/reviews/:id	Delete review (Admin only)
 Method	Endpoint	Description
 POST	/api/purchases	Purchase a design
 GET	/api/purchases	Get all orders (Admin)
-🧾 Models (Schemas)
+   Models (Schemas)
 1. User
 
 name, email, password, role (Admin | Customer)
@@ -110,7 +110,7 @@ reviewer, design, rating, comment, createdAt
 
 customer, design, selectedPlan, paymentStatus, purchaseDate
 
-✅ Validation & Error Handling
+   Validation & Error Handling
 
 All input data is validated using Zod or Joi
 
@@ -118,7 +118,7 @@ Centralized error middleware handles all runtime and validation errors
 
 Proper HTTP status codes and messages
 
-🔒 Authentication & Authorization
+   Authentication & Authorization
 
 JWT-based Auth (Bearer token)
 
@@ -126,17 +126,17 @@ Admin and Customer roles with protected routes
 
 Middleware: auth, authorizeRole
 
-🌟 Bonus Features
+   Bonus Features
 
-✅ Pagination & Filtering (e.g., GET /api/designs?page=1&limit=10)
+   Pagination & Filtering (e.g., GET /api/designs?page=1&limit=10)
 
-✅ Full-text Search API (?search=landing)
+   Full-text Search API (?search=landing)
 
-✅ Soft Delete for designs (status: "Archived")
+   Soft Delete for designs (status: "Archived")
 
-✅ Aggregated "Top Rated Designs" API
+   Aggregated "Top Rated Designs" API
 
-⚙️ Getting Started
+   Getting Started
 1. Clone the repo
 git clone https://github.com/Tirtho-Ray/portfolio-backend
 cd uxui-portfolio-backend
