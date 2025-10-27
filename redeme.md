@@ -151,7 +151,7 @@ NODE_ENV=development
 # Port
 PORT=8080
 # Database URL
-DB_URL=mongodb+srv://LearnExpressMongoose:wSzGi7VIc9sR756d@cluster0.thodmul.mongodb.net/LearnMongooseExpress?retryWrites=true&w=majority
+DB_URL=
 # Bcrypt Salt Rounds
 BCRYPT_SALT_ROUNDS=6
 # JWT Secrets and Expiry
